@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - ShopX</title>
+    <link rel="stylesheet" href="/frontend/assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="logo">ShopX</h1>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="orders.html">Orders</a></li>
+      </ul>
+
+      <ul class="auth-links">
+        <li><a href="login.html" id="nav-login">Login</a></li>
+        <li><a href="#" id="nav-logout" style="display: none">Logout</a></li>
+      </ul>
+    </nav>
+
+    <section class="product-detail"></section>
+    <div id="toast-container"></div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/authStatus.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

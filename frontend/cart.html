@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart - ShopX</title>
+    <link rel="stylesheet" href="/frontend/assets/css/style.css" />
+  </head>
+  <body>
+    <style>
+      .cart-section {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+      }
+
+      .cart-container {
+        display: flex;
+        gap: 30px;
+      }
+
+      .cart-items {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .cart-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        gap: 20px;
+        border: 1px solid #ddd;
+      }
+      .cls-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .cart-row img {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .cart-row span {
+        flex: 1;
+        font-size: 1rem;
+      }
+
+      .qty-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .qty-btn {
+        background: #eee;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+
+      .remove {
+        background: red;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .cart-summary {
+        flex: 1;
+        padding: 20px;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+
+      .checkout-btn {
+        width: 100%;
+        padding: 12px;
+        background: #000;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .checkout-btn a {
+        color: white;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .cart-container {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+    <nav class="navbar">
+      <h1 class="logo">ShopX</h1>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html" class="active">Cart</a></li>
+        <li><a href="orders.html">Orders</a></li>
+      </ul>
+
+      <ul class="auth-links">
+        <li><a href="login.html" id="nav-login">Login</a></li>
+        <li><a href="#" id="nav-logout" style="display: none">Logout</a></li>
+      </ul>
+    </nav>
+
+    <section class="cart-section">
+      <h2>Your Cart</h2>
+
+      <div class="cart-container">
+        <div class="cart-items"></div>
+
+        <div class="cart-summary">
+          <h3>Order Summary</h3>
+          <p class="subtotal">Subtotal: ₨ <span id="total-price">0</span></p>
+          <button class="checkout-btn">
+            <a href="checkout.html">Proceed to Checkout</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <div id="toast-container"></div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/authStatus.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

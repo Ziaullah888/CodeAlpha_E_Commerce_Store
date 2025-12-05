@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Details - Admin</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      .admin-container {
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 20px;
+      }
+
+      .details-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .details-card ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .btn-update {
+        background: #3498db;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+
+      .btn-back {
+        margin-top: 20px;
+        background: #444;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin-container">
+      <h2>Order Details</h2>
+
+      <div id="orderDetails"></div>
+
+      <button class="btn-back" onclick="window.history.back()">← Back</button>
+    </div>
+
+    <script src="../assets/js/api.js"></script>
+    <script src="order-details.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - ShopX</title>
+    <link rel="stylesheet" href="/frontend/assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="logo">ShopX</h1>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="orders.html">Orders</a></li>
+      </ul>
+
+      <ul class="auth-links">
+        <li><a href="login.html" id="nav-login">Login</a></li>
+        <li><a href="#" id="nav-logout" style="display: none">Logout</a></li>
+      </ul>
+    </nav>
+
+    <section class="checkout-page">
+      <h2>Checkout</h2>
+
+      <div class="checkout-container">
+        <div class="checkout-box">
+          <h3>Shipping Information</h3>
+        <form>
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your full name" required />
+
+          <label>Address</label>
+          <input type="text" placeholder="Enter your address" required />
+
+          <label>City</label>
+          <input type="text" placeholder="Enter your city" required />
+
+          <label>Phone</label>
+          <input type="tel" placeholder="Enter phone number" required />
+        </div>
+
+        <div class="checkout-box">
+          <h3>Payment Method</h3>
+
+          <label>Card Number</label>
+          <input
+            type="text"
+            placeholder="1234 5678 9012 3456"
+            required
+            id="payment-info"
+          />
+
+          <label>Expiry Date</label>
+          <input type="text" placeholder="MM/YY" required />
+
+          <label>Others</label>
+          <input type="text" placeholder="•••" required />
+        </div>
+
+        <div class="checkout-box">
+          <h3>Order Summary</h3>
+
+          <p id="checkout-name"></p>
+
+          <hr />
+
+          <p id="checkout-total"><strong>Total: $199</strong></p>
+
+          <button class="btn" type="button" id="placeOrder" type="submit">Place Order</button>
+           <div id="error-box" style="color: red; margin-top: 10px"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div id="toast-container"></div>
+   
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/authStatus.js"></script>
+    <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
